@@ -1,0 +1,169 @@
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+/* CSS Document */
+body#tinymce.wp-editor {
+	/*
+    font-family: "Helvetica Neue",Helvetica,Arial,"游ゴシック","YuGothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","Meiryo","メイリオ","ＭＳ ゴシック",sans-serif;
+    */
+    font-family:"Tsukushi A Round Gothic","秀英丸ゴシック L","Shuei MaruGo L","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+	font-size:14px;
+	line-height:1.6;
+}
+
+/* ブログ記事
+------------------------------------------------------------------- */
+body#tinymce.wp-editor {
+	margin: 10px;
+    line-height:2;
+}
+
+body#tinymce.wp-editor:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+body#tinymce.wp-editor .alignleft {
+    float:left;
+    width:48%;
+    margin-right:4%;
+}
+
+body#tinymce.wp-editor .alignright {
+    float:right;
+    width:48%;
+    margin-left:4%;
+}
+
+
+body#tinymce.wp-editor h1 {
+    font-size:24px;
+    font-weight:bold;
+}
+
+body#tinymce.wp-editor h2 {
+    font-size:12px;
+    font-weight:bold;
+}
+
+body#tinymce.wp-editor h3 {
+    font-size:16px;
+    font-weight:bold;
+}
+
+body#tinymce.wp-editor p {
+}
+
+body#tinymce.wp-editor strong {
+    font-weight:bold;
+}
+
+body#tinymce.wp-editor em {
+    font-style:italic;
+}
+
+body#tinymce.wp-editor a {
+    text-decoration:underline;
+}
+
+body#tinymce.wp-editor .aligncenter {
+    height:auto;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+body#tinymce.wp-editor .alignnone {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+body#tinymce.wp-editor ul {
+    padding-left:1.6em;
+    list-style:disc;
+    list-style-type:disc;
+}
+
+body#tinymce.wp-editor ol {
+    padding-left:1.6em;
+    list-style:decimal;
+    list-style-type:decimal;
+}
+
+body#tinymce.wp-editor .sickchild-preschool-title {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .sickchild-preschool-title:before {
+  content: "● ";
+  font-size: 12px;
+  color: #ef858c;
+}
+
+body#tinymce.wp-editor table {
+  position: relative
+}
+
+body#tinymce.wp-editor table {
+  border-collapse: collapse;
+  border:none;
+  width: 100%
+}
+body#tinymce.wp-editor table tfoot,
+body#tinymce.wp-editor table thead {
+  font-weight: 700
+}
+body#tinymce.wp-editor table td,
+body#tinymce.wp-editor table th {
+  position: relative;
+  padding: 11px 30px
+}
+body#tinymce.wp-editor table td:after,
+body#tinymce.wp-editor table th:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right,#e9473f 6px,transparent 6px);
+  background-size: 12px 1px;
+  background-position: top;
+  background-repeat: repeat-x
+}
+body#tinymce.wp-editor table:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right,#e9473f 6px,transparent 6px);
+  background-size: 12px 1px;
+  background-position: top;
+  background-repeat: repeat-x
+}
+body#tinymce.wp-editor table th {
+  text-align: center;
+  background-color: #fffcdb;
+  color: #e9473f;
+  font-weight: 400;
+  min-width: 150px;
+  max-width: 20%
+}
+body#tinymce.wp-editor table td {
+  background-color: #fff
+}

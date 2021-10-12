@@ -1,0 +1,75 @@
+@charset "UTF-8";
+*,
+:after,
+:before {
+  box-sizing: border-box
+}
+html {
+  font-size: 62.5%;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%
+}
+@font-face {
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium")
+}
+@font-face {
+  font-family: "Yu Gothic M";
+  src: local("Yu Gothic Bold");
+  font-weight: 700
+}
+body {
+  font-family: "Tsukushi A Round Gothic","秀英丸ゴシック L","Shuei MaruGo L","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO",HGMaruGothicMPRO
+}
+main {
+  display: block
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400
+}
+div,
+figure {
+  margin: 0;
+  padding: 0
+}
+p {
+  margin: 0 0 1em
+}
+a {
+  outline: 0;
+  color: #000;
+  text-decoration: none
+}
+a:active,
+a:hover {
+  text-decoration: underline
+}
+img {
+  vertical-align: bottom
+}
+dl,
+ol,
+table,
+ul {
+  line-height: 2;
+  margin: 0;
+  padding: 0
+}
+ol,
+ul {
+  padding-left: 1.6em
+}
+::selection {
+  background: teal;
+  color: #fff
+}
+::-moz-selection {
+  background: teal;
+  color: #fff
+}

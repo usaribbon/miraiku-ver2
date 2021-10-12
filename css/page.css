@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/** main
+===================================*/
+/** foundation
+===================================*/
+/*
+ * 各種変数
+ */
+/*
+ * 初期設定（normalize.cssを上書き）
+ */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #ffffff;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium");
+}
+
+@font-face {
+  font-family: "Yu Gothic M";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+body {
+  font-family: "Tsukushi A Round Gothic","秀英丸ゴシック L","Shuei MaruGo L","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+a {
+  outline: none;
+  color: #000;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  text-decoration: underline;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+dl, ul, ol, table {
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  padding-left: 1.6em;
+}
+
+::-moz-selection {
+  background: teal;
+  color: #ffffff;
+}
+
+::selection {
+  background: teal;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: teal;
+  color: #ffffff;
+}
+
+/**
+ * 画像ロールオーバー
+ */
+/*
+SCSS
+a {
+    @include image-rollover();
+}
+
+HTML
+<a href="#">
+   <figure><img src="./path/to/image.jpg" alt="" /></figure>
+</a>
+*/
+/*
+ * 画像
+ */
+/*
+ * line-heightを考慮した下マージン
+ */
+/*
+ * リセット
+ */
+/*
+ * clearfix
+ * [参照](http://nicolasgallagher.com/micro-clearfix-hack/)
+*/
+/*
+ * グリッド
+ */
+/*
+ * メディアクエリ
+ */
+/*
+通常のパターンは下記のようになる。
+    @include mqx('lg-') {
+        background:#ff0000;
+    }
+    @include mqx('-lg') {
+        background:#ff0000;
+    }
+    @include mqx('sm-lg') {
+        background:#ff0000;
+    }
+
+$deviceに入力があり、かつconfig.scssにおいて$cf-layout__use-deviceがtrueである場合は$device設定が有効になる。
+    @include mqx('lg-', 'sp') {
+        background:#ff0000;
+    }
+
+    ※この場合、幅指定としてのlgは無視されスマートフォンデバイスであれば全てに適用される。
+*/
+/*
+ * フォントサイズ指定
+ */
+/** layout
+===================================*/
+/** object
+===================================*/
+/** page
+===================================*/

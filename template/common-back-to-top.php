@@ -1,0 +1,1 @@
+            <p id="js-back-to-top"><a href="#l-canvas" class="smooth-scroll p-back-to-top">&nbsp;</a></p>
