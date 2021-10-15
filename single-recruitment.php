@@ -50,19 +50,19 @@
                                             <?php endif; ?>
 
                                             <?php $label = get_field_object('job_description');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <p class="recruit-box__item__title center-sp"><?php the_field('job_description');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('qualification');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <p class="recruit-box__item__position center-sp"><?php the_field('qualification');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('number_positions');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <?php 
                                                 //主張アイコン
@@ -78,32 +78,32 @@
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('location');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <p class="recruit-box__item__title center-sp"><?php the_field('location');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('access');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <p class="recruit-box__item__position center-sp"><?php the_field('access');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('job_time');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <p class="recruit-box__item__position center-sp"><?php the_field('job_time');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('salary');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <p class="recruit-box__item__title center-sp"><?php the_field('salary');?></p>
                                             <?php endif;?>
 
 
                                             <?php $label = get_field_object('holiday');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 
                                                 <?php 
@@ -121,7 +121,7 @@
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('welfare');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <?php 
                                                 //主張アイコン
@@ -137,7 +137,7 @@
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('etc');?>
-                                            <?php if ( $label['value']>0 ) :?>
+                                            <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
                                                 <p class="recruit-box__item__position center-sp"><?php the_field('etc');?></p>
                                             <?php endif;?>
