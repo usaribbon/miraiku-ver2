@@ -98,15 +98,118 @@ $args = array(
 <?php endif;?>
 <?php wp_reset_query();?>
 
+
+                <!--  求人情報 -->
                 <section class="c-box u-bg--circle--lightpurple">
                     <div class="c-box__fixed c-box__padding">
+                        <div class="c-column">
+                            <div class="c-column__inner">
+                                <div class="c-column__item">
+                                    <section>
+                                        <div class="p-content">
+                                            <div class="center-pc left-sp"><p>現在、下記の職種で募集を行なっています。<br/>応募を検討される方は、以下のページをご覧の上、お問い合わせフォームよりお問い合わせください。</p></div>
+                                         </div>
+                                         <?php
+                                        // 中途・新卒・アルバイトカテゴリ取得
+                                        $recruitment_categories = get_terms( array(
+                                            'terms' => 'recruitment_category',
+                                            'orderby' => 'ID',
+                                            'order'   => 'ASC'
+                                        ) );
+                                        $n=1;
+                                        if( ! empty($recruitment_categories)):
+                                        foreach($recruitment_categories as $recruitment_category):?>
+                                        <?php $args = array(
+                                            'posts_per_page' => -1,
+                                            'post_type' => 'recruitment',
+                                            'status' => 'publish',
+                                            'orderby' => 'date',
+                                            'tax_query' => array(
+                                                'relation' => 'AND',
+                                                array(
+                                                    'taxonomy' => 'recruitment_category',
+                                                    'field'    => 'slug',
+                                                    'terms'    => array( $recruitment_category->slug ),
+                                                    'orderby' => 'date',
+                                                    'order'   => 'ASC'
+                                                ),
+                                            ),
+                                        );
+                                        ?>
+<?php $the_query = new WP_Query($args); ?>
+<?php if ($the_query->have_posts()):?>
+                                        <h2 class="p-heading--grapepurple" id="rec<?php echo $n ?>"><?php echo $recruitment_category->name;?></h2>
+
+                                        <div class="p-content">
+                                            <div class="preschool-box">
+<?php $n+=1; while ( $the_query->have_posts() ) : $the_query->the_post();?>
+<a href="<?php the_permalink();?>">
+                                                <div class="recruit-box">
+                                                    <div class="u-frame--arc is-purple-rightdown">
+                                                        <div class="content grid__item">
+                                                            <h3 class="recruit-box__item__title"><?php the_title();?></h3>
+                                                            <div class="content-flex">
+                                                                <p class="content-flex-innner recruit-box__item__salary recruit_icon">
+                                                                    <span class="icon--feature icon--feature__salary font-bolder">給与</span>
+                                                                </p>
+                                                                <p class="content-flex-innner"><span class="font-bolder"><?php the_field('salary_main');?></span><br/>
+                                                                <span class="font-smaller"><?php the_field('salary',false,false);?></span></p>
+                                                            </div>
+                                                            <div class="content-flexbox content-flexbox">
+                                                                <div class="content-flex">
+                                                                    <p class="recruit_icon content-flex-innner recruit-box__item__location">
+                                                                        <span class="icon--feature icon--feature__location font-bolder">勤務地</span>
+                                                                    </p>
+                                                                    <p class="content-flex-innner"><span class="font-bolder"><?php the_field('main_location');?></span><br/>
+                                                                    <span class="font-smaller"><?php the_field('location');?></span></p>
+                                                                </div>
+                                                                <div class="content-flex">
+                                                                    <p class="recruit_icon content-flex-innner recruit-box__item__time">
+                                                                        <span class="icon--feature icon--feature__time font-bolder">勤務時間</span>
+                                                                    </p>
+                                                                    <p class="content-flex-innner"><?php the_field('job_type');?></p>
+                                                                </div>
+                                                            </div><!-- /.content-flexbox -->
+                                                        </div>
+                                                    </div>
+                                                </div><!-- /.recruit-box -->
+                                            </a>
+<?php endwhile;?>
+                                            </div>
+                                        </div>
+<?php endif;?>
+<?php endforeach;?>
+<?php endif;?>
+                                    </section>
+                                </div><!-- /.c-column__primary -->
+
+                                <div class="c-column__item"><!-- c-column__item -->
+                                    <div class="p-widget p-widget--grapepurple">
+                                        <h2 class="title">求人情報</h2>
+                                        <ul class="list">
+                                            <li class="list__item"><a href="./#rec1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 中途採用</a></li>
+                                            <li class="list__item"><a href="./#rec2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 新卒採用</a></li>
+                                            <li class="list__item"><a href="./#rec3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> アルバイト</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!-- /.c-column__secondary -->
+                            </div>
+                        </div>
+                    </div><!-- /.c-box__fixed c-box__padding -->
+                </section><!-- 求人情報section -->
+
+
+
+                <section class="c-box u-bg--circle--lightpurple">
+                    
+<?php
+/*
+<div class="c-box__fixed c-box__padding">
 
                         <div class="p-content p-content--s">
 <div class="indeedjobs-widget" data-id="aee90cdd3626b409e554" data-theme="light" data-height="400"></div> <a href="" class="engage-recruit-widget" data-height="300" data-width="500" data-url="https://en-gage.net/chiikihoiku_saiyo/widget/" target="_blank"></a><script src="https://en-gage.net/common/company_script/recruit/widget.js"></script></div>
                             </table>
                         </div>
-<?php
-/*
 <?php if(have_rows('recruit_requirement')): ?>
                         <div class="p-content p-content--s">
                             <header class="p-page-subheader">
