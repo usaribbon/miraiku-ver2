@@ -38,7 +38,7 @@
 
                                            ?>
                                             
-                                            <h2 class="recruit-box__item__name center-sp"><?php the_title();?></h2>
+                                            <h2 class="recruit-box__item__name"><?php the_title();?></h2>
 
                                             <?php
                                             //職業の特徴アイコンの表示
@@ -52,13 +52,13 @@
                                             <?php $label = get_field_object('job_description');?>
                                             <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
-                                                <p class="recruit-box__item__title center-sp"><?php the_field('job_description');?></p>
+                                                <p class="recruit-box__item__title"><?php the_field('job_description');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('qualification');?>
                                             <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
-                                                <p class="recruit-box__item__position center-sp"><?php the_field('qualification');?></p>
+                                                <p class="recruit-box__item__position"><?php the_field('qualification');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('number_positions');?>
@@ -74,31 +74,31 @@
                                                 <?php endforeach; ?>
                                                 </div>
                                                 <?php endif; ?>
-                                                <p class="recruit-box__item__position center-sp"><?php the_field('number_positions');?></p>
+                                                <p class="recruit-box__item__position"><?php the_field('number_positions');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('location');?>
                                             <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
-                                                <p class="recruit-box__item__title center-sp"><?php the_field('location');?></p>
+                                                <p class="recruit-box__item__title"><?php the_field('location');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('access');?>
                                             <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
-                                                <p class="recruit-box__item__position center-sp"><?php the_field('access');?></p>
+                                                <p class="recruit-box__item__position"><?php the_field('access');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('job_time');?>
                                             <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
-                                                <p class="recruit-box__item__position center-sp"><?php the_field('job_time');?></p>
+                                                <p class="recruit-box__item__position"><?php the_field('job_time');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('salary');?>
                                             <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
-                                                <p class="recruit-box__item__title center-sp"><?php the_field('salary');?></p>
+                                                <p class="recruit-box__item__title"><?php the_field('salary');?></p>
                                             <?php endif;?>
 
 
@@ -117,7 +117,7 @@
                                                 </div>
                                                 <?php endif; ?>
 
-                                                <p class="recruit-box__item__title center-sp"><?php the_field('holiday');?></p>
+                                                <p class="recruit-box__item__title"><?php the_field('holiday');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('welfare');?>
@@ -133,13 +133,13 @@
                                                 <?php endforeach; ?>
                                                 </div>
                                                 <?php endif; ?>
-                                                <p class="recruit-box__item__position center-sp"><?php the_field('welfare');?></p>
+                                                <p class="recruit-box__item__position"><?php the_field('welfare');?></p>
                                             <?php endif;?>
 
                                             <?php $label = get_field_object('etc');?>
                                             <?php if ( strlen($label['value'])>0 ) :?>
                                                 <h3 class="p-heading--grapepurple"><?php echo $label['label'];?></h3>
-                                                <p class="recruit-box__item__position center-sp"><?php the_field('etc');?></p>
+                                                <p class="recruit-box__item__position"><?php the_field('etc');?></p>
                                             <?php endif;?>
                                         </div>
                                           <?php endif;?>
@@ -152,7 +152,7 @@
                                         <ul class="list">
                                             <li class="list__item"><a href="../../recruit/#rec1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 中途採用</a></li>
                                             <li class="list__item"><a href="../../recruit/#rec2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 新卒採用</a></li>
-                                            <li class="list__item"><a href="../../recruit/#rec3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> アルバイト</a></li>
+                                            <li class="list__item"><a href="../../recruit/#rec3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> アルバイト・パートタイム</a></li>
                                         </ul>
                                     </div>
                                 </div><!-- /.c-column__secondary -->

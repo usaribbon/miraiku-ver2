@@ -6440,6 +6440,12 @@ ul {
 
 #page__recruitment .p-content h2{
   margin: 0.3em 0;
+  line-height: 1.5em;
+}
+
+#page__recruit .p-content h3{
+  margin: 0.3em 0;
+  line-height: 1.5em;
 }
 
 #page__recruitment .p-page-header {
@@ -6635,11 +6641,13 @@ ul {
 }
 .font-bolder{
   font-weight: bold;
+  line-height: 1.5em;
+  display: inline-flex;
 }
 
 .font-smaller{
   font-size: smaller;
-  line-height: 1.5;
+  line-height: 1.5em;
   display: inline-flex;
 }
 

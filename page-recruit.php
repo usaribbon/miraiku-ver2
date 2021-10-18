@@ -117,6 +117,7 @@ $args = array(
                                             'order'   => 'ASC'
                                         ) );
                                         $n=1;
+                                        $menu_title = array();
                                         if( ! empty($recruitment_categories)):
                                         foreach($recruitment_categories as $recruitment_category):?>
                                         <?php $args = array(
@@ -138,6 +139,7 @@ $args = array(
                                         ?>
 <?php $the_query = new WP_Query($args); ?>
 <?php if ($the_query->have_posts()):?>
+                                        <?php $menu_title[] = $recruitment_category->name; ?>
                                         <h2 class="p-heading--grapepurple" id="rec<?php echo $n ?>"><?php echo $recruitment_category->name;?></h2>
 
                                         <div class="p-content">
@@ -152,8 +154,12 @@ $args = array(
                                                                 <p class="content-flex-innner recruit-box__item__salary recruit_icon">
                                                                     <span class="icon--feature icon--feature__salary font-bolder">給与</span>
                                                                 </p>
-                                                                <p class="content-flex-innner"><span class="font-bolder"><?php the_field('salary_main');?></span><br/>
-                                                                <span class="font-smaller"><?php the_field('salary',false,false);?></span></p>
+                                                                <p class="content-flex-innner"><span class="font-bolder"><?php the_field('salary_main');?></span>
+                                                                <?php if( get_field('salary') ): ?>
+                                                                    <br/>
+                                                                    <span class="font-smaller"><?php the_field('salary',false,false);?></span>
+                                                                <?php endif; ?>
+                                                                </p>
                                                             </div>
                                                             <div class="content-flexbox content-flexbox">
                                                                 <div class="content-flex">
@@ -187,9 +193,10 @@ $args = array(
                                     <div class="p-widget p-widget--grapepurple">
                                         <h2 class="title">求人情報</h2>
                                         <ul class="list">
-                                            <li class="list__item"><a href="./#rec1"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 中途採用</a></li>
-                                            <li class="list__item"><a href="./#rec2"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 新卒採用</a></li>
-                                            <li class="list__item"><a href="./#rec3"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> アルバイト</a></li>
+                                            <?php $i=1;foreach ($menu_title as $menu) :?>
+                                                <li class="list__item"><a href="./#rec<?= $i ?>"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> <?= $menu ?></a></li>
+                                                <?php $i+=1; ?>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </div>
                                 </div><!-- /.c-column__secondary -->
