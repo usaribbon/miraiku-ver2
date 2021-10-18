@@ -113,7 +113,7 @@ $args = array(
                                         // 中途・新卒・アルバイトカテゴリ取得
                                         $recruitment_categories = get_terms( array(
                                             'terms' => 'recruitment_category',
-                                            'orderby' => 'ID',
+                                            'orderby' => 'slug',
                                             'order'   => 'ASC'
                                         ) );
                                         $n=1;
