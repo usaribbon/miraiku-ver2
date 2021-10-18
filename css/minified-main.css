@@ -6383,12 +6383,16 @@ ul {
 #page__recruitment .icon--feature
  {
   position: relative;
-  margin: 1.2em 1.2em 0 0;
+  margin: 0;
   padding-left: 22px!important;
   letter-spacing: 0.1em;
   line-height: 1.3;
   color:#8F7AB9;
   
+}
+
+#page__recruitment .icon--feature{
+  margin: 1.2em 1.2em 0 0;
 }
 
 #page__recruit .icon--feature:before,

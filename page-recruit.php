@@ -155,10 +155,10 @@ $args = array(
                                                                     <span class="icon--feature icon--feature__salary font-bolder">給与</span>
                                                                 </p>
                                                                 <p class="content-flex-innner"><span class="font-bolder"><?php the_field('salary_main');?></span>
-                                                                <?php if( get_field('salary') ): ?>
+                                                                <?php if( strlen(get_field('salary'))>0 ): ?>
                                                                     <br/>
                                                                     <span class="font-smaller"><?php the_field('salary',false,false);?></span>
-                                                                <?php endif; ?>
+                                                                <?php endif;?>
                                                                 </p>
                                                             </div>
                                                             <div class="content-flexbox content-flexbox">
